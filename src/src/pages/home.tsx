@@ -1,4 +1,8 @@
+import useTitle from "../hooks/use-title";
+
 function Home() {
+  useTitle("Home • James");
+
   const myBirthDate = new Date("2000-08-29");
   const myAge = Math.abs(
     new Date(Date.now() - myBirthDate.getTime()).getUTCFullYear() - 1970

@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import useTitle from "../hooks/use-title";
 
 type Project = {
   name: string;
@@ -101,6 +102,8 @@ const projects: Project[] = [
 ];
 
 function Projects() {
+  useTitle("Projects • James");
+
   return (
     <>
       <h1 className="mb-4 font-bold text-xl">Projects</h1>
