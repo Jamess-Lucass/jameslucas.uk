@@ -81,11 +81,17 @@ function Layout() {
               {theme === "light" ? <Moon /> : <Sun />}
             </button>
             {isNavOpen ? (
-              <button onClick={handleToggleNavOpenOnClick}>
+              <button
+                className="hover:cursor-pointer lg:hidden"
+                onClick={handleToggleNavOpenOnClick}
+              >
                 <Close />
               </button>
             ) : (
-              <button onClick={handleToggleNavOpenOnClick}>
+              <button
+                className="hover:cursor-pointer lg:hidden"
+                onClick={handleToggleNavOpenOnClick}
+              >
                 <BurgerMenu />
               </button>
             )}
