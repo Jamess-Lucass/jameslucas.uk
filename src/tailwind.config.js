@@ -3,8 +3,26 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     fontFamily: {
-      sans: ["Karla", "Inter"],
-      serif: ["Karla", "Inter"],
+      sans: [
+        "Karla",
+        "Inter",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Ubuntu",
+        "Helvetica Neue",
+      ],
+      serif: [
+        "Karla",
+        "Inter",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Ubuntu",
+        "Helvetica Neue",
+      ],
     },
     extend: {},
   },
