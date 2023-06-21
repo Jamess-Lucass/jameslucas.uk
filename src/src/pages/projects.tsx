@@ -110,11 +110,14 @@ function Projects() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
         {projects.map((project) => (
-          <div key={project.name} className="border rounded-md">
+          <div
+            key={project.name}
+            className="border rounded-md dark:border-stone-700"
+          >
             <a
               href={project.link}
               target="_blank"
-              className="flex items-center gap-1 p-4 border-b hover:bg-slate-100"
+              className="flex items-center gap-1 p-4 border-b dark:border-stone-700 hover:bg-slate-100 dark:hover:bg-stone-900"
             >
               <h1>{project.name}</h1>
               <svg
