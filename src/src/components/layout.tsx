@@ -57,10 +57,11 @@ function Layout() {
   };
 
   const classnames = clsx(
-    "h-screen bg-stone-100 dark:bg-black text-black dark:text-stone-300",
-    isNavOpen && "h-screen",
-    "overflow-hidden"
+    "min-h-screen bg-stone-100 dark:bg-black text-black dark:text-stone-300",
+    isNavOpen && "h-screen overflow-hidden"
   );
+
+  console.log(isNavOpen);
 
   const linksCompoent = links.map(({ to, name }) => (
     <li key={to} className="py-1">
@@ -72,7 +73,7 @@ function Layout() {
 
   return (
     <div className={classnames}>
-      <div className="fixed w-full lg:h-full lg:w-60 lg:border-r dark:border-stone-800 lg:block lg:p-6 flex items-center p-4 border-b lg:border-b-0 h-14 inset-0">
+      <div className="fixed w-full lg:h-full lg:w-60 lg:border-r dark:border-stone-800 lg:block lg:p-6 flex items-center p-4 border-b lg:border-b-0 h-14 inset-0 bg-inherit">
         <div className="flex w-full">
           <span className="flex-1">James Lucas</span>
 

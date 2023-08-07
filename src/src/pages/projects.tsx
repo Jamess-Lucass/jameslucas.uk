@@ -154,7 +154,7 @@ function Projects() {
             <a
               href={project.link}
               target="_blank"
-              className="flex items-center gap-1 p-4 border-b dark:border-stone-700 hover:bg-stone-200 dark:hover:bg-stone-900"
+              className="flex items-center gap-1 p-4 border-b dark:border-stone-700 hover:bg-stone-200 dark:hover:bg-stone-900 transition ease-in-out duration-100"
             >
               <h1>{project.name}</h1>
               <ExternalLink />
