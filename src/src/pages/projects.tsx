@@ -29,6 +29,11 @@ const projects: Project[] = [
           basket-service, order-service, email-service, with the 10th being the
           gitops repository for all the automation to take place from.
         </p>
+
+        <p>
+          These are build using .NET, Go, React, Vite, Tailwind CSS, NextJS, SQL
+          Server, PostgreSQL, MongoDB, Redis, Docker, Kubernetes & RabbitMQ.
+        </p>
       </div>
     ),
   },
@@ -59,6 +64,8 @@ const projects: Project[] = [
           and is very opinionated with the entire API, it also only supports C#
           and I wanted to utilize multiple languages.
         </p>
+
+        <p>This is built using .NET & Go.</p>
       </div>
     ),
   },
@@ -83,6 +90,8 @@ const projects: Project[] = [
           I run this as a Kubernetes cronjob on a nightly basis and automates
           the process of checking for updates and creating pull requests.
         </p>
+
+        <p>This is built using Go.</p>
       </div>
     ),
   },
@@ -96,7 +105,34 @@ const projects: Project[] = [
           website.
         </p>
 
-        <p>This is built using React, Vite and Tailwind CSS. </p>
+        <p>This is built using React, Vite and Tailwind CSS.</p>
+      </div>
+    ),
+  },
+  {
+    name: "Warframe Message Notifier",
+    link: "https://github.com/Jamess-Lucass/warframe-message-notifier",
+    description: (
+      <div className="flex flex-col gap-4">
+        <p>
+          This project is a program that will tail a log file for the game
+          Warframe, which produces a log everytime you receive a new direct
+          message.
+        </p>
+
+        <p>
+          Upon detecting a log entry, it will send you a notification via a
+          Discord DM.
+        </p>
+
+        <p>
+          I developed this because there is an in-game trading feature, so
+          people often AFK while waiting for someone to buy their items. This
+          allows you to tab out of the game and do something else without
+          missing the in-game message.
+        </p>
+
+        <p>This is built using Go.</p>
       </div>
     ),
   },
