@@ -10,7 +10,7 @@ type Project = {
 
 const projects: Project[] = [
   {
-    name: "Ecommerce Shop",
+    name: "Ecommerce Store",
     link: "https://github.com/Jamess-Lucass?tab=repositories&q=ecommerce",
     description: (
       <div className="flex flex-col gap-4">
@@ -19,7 +19,7 @@ const projects: Project[] = [
           using microservices that are deployed to Kubernetes, I have purposely
           developed the services with different languages and libraries to gain
           exposure to different languages and have a nice foundation across many
-          languages that I can perform proof-of-concepts with on a real-world
+          languages that I can perform proof-of-concepts with, on a real-world
           application.
         </p>
 
