@@ -75,7 +75,7 @@ function Layout() {
           <span className="flex-1">James Lucas</span>
 
           <div className="flex gap-4 lg:gap-0 items-center">
-            <button onClick={handleThemeOnClick}>
+            <button onClick={handleThemeOnClick} className="cursor-pointer">
               {theme === "light" ? <Moon /> : <Sun />}
             </button>
             {isNavOpen ? (
