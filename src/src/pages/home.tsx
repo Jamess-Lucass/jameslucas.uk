@@ -1,38 +1,40 @@
 import useTitle from "../hooks/use-title";
 
 function Home() {
-  useTitle("Home • James");
+  useTitle("James Lucas • Lead Software Developer");
 
-  const myBirthDate = new Date("2000-08-29");
-  const myAge = Math.abs(
-    new Date(Date.now() - myBirthDate.getTime()).getUTCFullYear() - 1970
-  );
+  const dateOfBirth = new Date("2000-08-29");
+  const today = new Date();
+
+  const myAge =
+    new Date(today.getTime() - dateOfBirth.getTime()).getUTCFullYear() - 1970;
 
   return (
     <div className="flex flex-col gap-4 lg:w-1/2">
-      <h1 className="font-bold text-xl">Who am i?</h1>
+      <h1 className="font-bold text-xl">Who am I?</h1>
 
       <p>
-        I am a {myAge} year old developer, living in the UK. I enjoy working on
-        every part of the stack, being able to create a product from scratch and
-        be confident in designing, developing, testing and deploying the
-        application to production.
+        I'm a {myAge}-year-old software developer based in London, UK. I like
+        working across the whole stack and being involved in the whole journey,
+        from the first idea right through to shipping it to production.
       </p>
 
       <p>
-        I have a strong interest in automation and attempting to automate and
-        streamline as many processes as possible, I am very interested in DevOps
-        and solving fundamental business problems. For example, setting up
-        things like continuous integration (CI) and continuous deployment (CD),
-        including automated tests so the developer can focus on just writing
-        code and has that safety net of regression tests from the testing
-        pipeline if any changes have effected anything. Ultimatley increasing
-        efficiency.
+        I'm a big fan of automation and defining things declaratively, so
+        everything stays reproducible.
       </p>
 
       <p>
-        I am all about picking the right tool for the job, doing the research
-        needed to come to a sensible decision on how to solve a given problem.
+        You can find my projects over on{" "}
+        <a
+          href="https://github.com/Jamess-Lucass"
+          target="_blank"
+          className="text-blue-600 hover:underline"
+        >
+          GitHub
+        </a>
+        . I've also contributed to a few open source projects like Argo CD,
+        gofiber/fiber and Elastic's Go APM agent.
       </p>
     </div>
   );
