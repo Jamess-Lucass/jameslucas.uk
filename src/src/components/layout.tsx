@@ -2,10 +2,10 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import NavLink from "./nav-link";
-import { ReactComponent as Sun } from "../icons/sun.svg";
-import { ReactComponent as Moon } from "../icons/moon.svg";
-import { ReactComponent as BurgerMenu } from "../icons/burger-menu.svg";
-import { ReactComponent as Close } from "../icons/close.svg";
+import Sun from "../icons/sun.svg?react";
+import Moon from "../icons/moon.svg?react";
+import BurgerMenu from "../icons/burger-menu.svg?react";
+import Close from "../icons/close.svg?react";
 
 type Link = {
   to: string;
@@ -14,7 +14,6 @@ type Link = {
 
 const links: Link[] = [
   { to: "/", name: "Home" },
-  { to: "/projects", name: "Projects" },
   { to: "/contact", name: "Contact" },
 ];
 
@@ -25,7 +24,7 @@ function Layout() {
       window.matchMedia("(prefers-color-scheme: dark)").matches) &&
       localStorage.getItem("theme") !== "light"
       ? "dark"
-      : "light"
+      : "light",
   );
 
   useEffect(() => {
@@ -58,10 +57,8 @@ function Layout() {
 
   const classnames = clsx(
     "min-h-screen bg-stone-100 dark:bg-black text-black dark:text-stone-300",
-    isNavOpen && "h-screen overflow-hidden"
+    isNavOpen && "h-screen overflow-hidden",
   );
-
-  console.log(isNavOpen);
 
   const linksCompoent = links.map(({ to, name }) => (
     <li key={to} className="py-1">
@@ -73,12 +70,12 @@ function Layout() {
 
   return (
     <div className={classnames}>
-      <div className="fixed w-full lg:h-full lg:w-60 lg:border-r dark:border-stone-800 lg:block lg:p-6 flex items-center p-4 border-b lg:border-b-0 h-14 inset-0 bg-inherit">
+      <div className="fixed w-full lg:h-full lg:w-60 lg:border-r border-stone-200 dark:border-stone-800 lg:block lg:p-6 flex items-center p-4 border-b lg:border-b-0 h-14 inset-0 bg-inherit">
         <div className="flex w-full">
           <span className="flex-1">James Lucas</span>
 
           <div className="flex gap-4 lg:gap-0 items-center">
-            <button onClick={handleThemeOnClick}>
+            <button onClick={handleThemeOnClick} className="cursor-pointer">
               {theme === "light" ? <Moon /> : <Sun />}
             </button>
             {isNavOpen ? (
